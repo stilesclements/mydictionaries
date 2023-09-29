@@ -207,3 +207,11 @@ ProduceDictionary={
     }
 }
 
+for produce,value in ProduceDictionary.items():
+    true_total=round(value["cost"]*value["amt_sold"],2)
+    if true_total!=value["total"]:
+        print("produce name: ",produce)
+        print(f"Calculated total: ${true_total}")
+        print("Stated Total: $", value["total"],"\n",sep="")
+
+    
